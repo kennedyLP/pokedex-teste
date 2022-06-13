@@ -1,0 +1,164 @@
+
+/* Header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* pokemon list */
+
+.pokemonList{
+    background-color: #ffff;
+    height: 90%;
+    padding: 20px;
+    margin-left: 3vw;
+}
+/* Title and subtitle of header */
+
+.titles-header{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    align-items: flex-start;
+}
+
+.titles-header h2{
+    font-weight: bolder;
+    color: rgb(37, 37, 37);
+}
+
+.titles-header h4{
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-top: 1vh;
+}
+
+
+.viewPerPage{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.viewPerPage h5{
+    font-weight: bolder;
+    color: rgb(71, 71, 71);
+}
+
+/* Search */
+
+span{
+    display: flex;
+    align-items: center;
+    width: 13rem;
+    border: 1px solid rgba(110, 110, 110, 0.849);
+    border-radius: 5px;
+    outline: none;
+}
+
+span input{
+    outline: none;
+    border: none;
+}
+
+/* pokemon box */
+
+
+.box{
+    display:flex;
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.pokemon-image{
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid rgba(110, 110, 110, 0.849);
+}
+
+.pokemon-description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.pokemon-description p {
+    margin-top: 0.3rem;
+    color: rgb(71, 71, 71);
+    font-weight: bold;
+    line-height: 1.7rem;
+}
+
+/* Pages navigation */
+
+.pages-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+
+@media (max-width:700px) {
+
+    .pokemonList{
+        margin-left: 0;   
+    }
+
+    .titles-header{
+        align-items: center;
+    }
+
+    .header{
+        justify-content: center;
+    }
+
+    span{
+        margin-top: 2vh;
+    }
+
+    .box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pokemon-image{
+        padding: 4rem;
+    }
+
+    .pokemon-description{
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-left:0;
+    }
+
+    .pokemon-description p{
+        margin-top: 1rem;
+        line-height: 2rem;
+    }
+
+    .pages-navigation{
+        justify-content: center;
+    }
+
+    pagination-controls{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width:375px) {
+
+    .titles-header h2{
+        font-size: 1.2rem
+    }
+    
+    .titles-header h4{
+        font-size:1rem;
+    }
+}

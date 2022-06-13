@@ -1,0 +1,22 @@
+/* header */
+header{
+    background-color: black;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* Hello Name */
+header h4{
+    color: rgb(240, 236, 236);
+}
+
+/* search */
+header span{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    color: rgb(240, 236, 236);
+}

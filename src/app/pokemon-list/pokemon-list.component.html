@@ -1,0 +1,42 @@
+<!-- PokemonList -->
+<div class="pokemonList">
+    <div class="header">
+        <div class="titles-header">      <!-- header -->
+            <h2>Fase teste prático Front_End</h2>
+                <h4>PokeBusca</h4>
+                <!-- view per page -->
+        </div>
+        <span class="material-symbols-outlined">   <!-- Search -->
+            <input type="text" id="buscar" >
+            search
+        </span>
+    </div>
+    <hr>
+        <div class="viewPerPage">
+            <h5>Exibindo 20 de {{totalPokemons}} itens</h5>    <!-- view per page -->
+        </div>
+    <hr>
+
+                                      <!-- Box of pokemons -->
+
+    <div *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons}">
+        <div class="box">
+            <img class="pokemon-image" [src]="pokemon.sprites.front_default" alt="Pokemon">
+
+                                     <!-- Pokemon Description-->
+                                     
+            <div class="pokemon-description">
+                <h3>{{pokemon.name}} #{{pokemon.id}}</h3>
+                <p>Características do Pokemon : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio porro laborum, quisquam
+                    harum laboriosam ut animi minus asperiores nobis eum fugit molestiae, repudiandae ea aliquam, quidem aut tenetur ab!
+                    Tempore.
+                </p>
+            </div>
+        </div>
+        <hr>
+                                        <!-- Pages navigation-->
+    </div>
+        <div class="pages-navigation">
+            <pagination-controls (pageChange)="page = $event; pokemons = []; getPokemons()"></pagination-controls>
+        </div>
+</div>
